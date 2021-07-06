@@ -1,0 +1,19 @@
+[0.906s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/luqman/beginners_ws/src/first_package']
+[0.907s] DEBUG:colcon:Parsed command line arguments: Namespace(base_paths=['/home/luqman/beginners_ws/src/first_package'], build_base='build', ignore_user_meta=False, log_base=None, log_level=None, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7f628bfd7fa0>>, metas=['./colcon.meta'], names_only=False, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, paths=None, paths_only=True, topological_graph=False, topological_graph_density=False, topological_graph_dot=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, topological_graph_legend=False, topological_order=False, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7f628bfd7fa0>, verb_name='list', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f628be94130>)
+[0.969s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.970s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.970s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.970s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.970s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.970s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/luqman/beginners_ws/src/first_package'
+[0.970s] Level 1:colcon.colcon_core.package_identification:_identify(/home/luqman/beginners_ws/src/first_package) by extensions ['ignore', 'ignore_ament_install']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(/home/luqman/beginners_ws/src/first_package) by extension 'ignore'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(/home/luqman/beginners_ws/src/first_package) by extension 'ignore_ament_install'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(/home/luqman/beginners_ws/src/first_package) by extensions ['colcon_pkg']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(/home/luqman/beginners_ws/src/first_package) by extension 'colcon_pkg'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(/home/luqman/beginners_ws/src/first_package) by extensions ['colcon_meta']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(/home/luqman/beginners_ws/src/first_package) by extension 'colcon_meta'
+[0.972s] Level 1:colcon.colcon_core.package_identification:_identify(/home/luqman/beginners_ws/src/first_package) by extensions ['ros']
+[0.972s] Level 1:colcon.colcon_core.package_identification:_identify(/home/luqman/beginners_ws/src/first_package) by extension 'ros'
+[1.003s] DEBUG:colcon.colcon_core.package_identification:Package '/home/luqman/beginners_ws/src/first_package' with type 'ros.ament_python' and name 'first_package'
+[1.003s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults

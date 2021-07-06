@@ -3,6 +3,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 from math import pow, atan2, sqrt
+
 def get_turtlesim_pose(data):
     # print(data)
     global bot_pose
@@ -31,10 +32,10 @@ def main(args=None):
     node = Node('Go_to_position_node')
     node.create_subscription(Pose,'/turtle1/pose',get_turtlesim_pose,10)
     desired_pose=Pose()
-    desired_pose.x = 9.1
-    desired_pose.y = 9.1
+    desired_pose.x = 1.0
+    desired_pose.y = 1.0
     pub=node.create_publisher(Twist,'/turtle1/cmd_vel',10)
-    node.create_timer(0.5, send_turtlesim_cmd_vel)
+    node.create_timer(1, send_turtlesim_cmd_vel)
 
     rclpy.spin(node)
     rclpy.shutdown()
