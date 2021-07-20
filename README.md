@@ -5,17 +5,13 @@
 - After Clonning the repo in **your_workspace/src/** then move to your_workspace(with cd ..) and perform colcon build
 
 ## Instructor
-- **Muhammad Luqman** 
-Muhammad Luqman  [Contact Profile](https://www.linkedin.com/in/muhammad-luqman-9b227a11b/)  
+- **Muhammad Luqman** [Contact Profile](https://www.linkedin.com/in/muhammad-luqman-9b227a11b/)  
 
 
 ## Robts Used in this Repository
 - **Turtlesim**
 - **Dolly**
-<div align="center">
-[ [Dolly Robot ][robot_image] ]
-</div>
-[robot_image]: https://github.com/noshluk2/15-ROS2-for-begginers/blob/main/dolly.png
+![alt text](https://github.com/noshluk2/15-ROS2-for-begginers/blob/main/dolly.png)
 
 
 ## License
