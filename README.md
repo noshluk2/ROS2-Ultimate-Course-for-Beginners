@@ -1,7 +1,9 @@
-## About this repository
+# ROS2 Ultimate Course for Beginners
 - This repository is great support to students of course  
-**ROS2 Ultimate course for Starters** [Link](https://www.udemy.com/user/e8894488-eb79-45f5-aef1-f3a8733b6f43/) 
-- people who are  learning ROS2 and needs scripts and explaination in the form of articles on *https://robotisim.com/* . 
+**ROS2 Ultimate course for Beginners** [Discounted_Link](https://www.udemy.com/course/ros2-ultimate-course-for-starters/?couponCode=GITHUB) 
+- People who are  learning ROS2 and needs scripts and explaination in the form of articles on *https://robotisim.com/* . 
+- You can check free previews in the course
+- Notes are provided as freebies
 
 ## How to Use The Packages
 - After Clonning the repo in **your_workspace/src/** then move to your_workspace(with cd ..) and perform colcon build
@@ -19,9 +21,9 @@
 - Launch files
 - RVIZ2 and Gazebo Simulation Fundamentals 
 - Adding Virtual Sensors to your Robot
-    -Camera
-    -Lidar
-    -Driving Differential Drive Control
+  - Camera
+  - Lidar
+  - Driving Differential Drive Control
 
 
 ### Robots
