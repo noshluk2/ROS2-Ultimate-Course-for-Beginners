@@ -7,14 +7,6 @@
 
 ![alt text](https://github.com/noshluk2/ROS2-Ultimate-Course-for-Beginners/blob/main/images/r2_baisc_thumbnail.png)
 
-
-## How to Use The Packages
-- After Clonning the repo in **your_workspace/src/** then move to your_workspace(with cd ..) and perform colcon build
-
-## Instructor
-- **Muhammad Luqman** [Contact Profile](https://www.linkedin.com/in/muhammad-luqman-9b227a11b/)  
-
-
 ## What is Inside the course 
 - Custom Workspace 
 - Custom Python Packages
@@ -39,6 +31,18 @@
 
 ![alt text](https://github.com/noshluk2/ROS2-Ultimate-Course-for-Beginners/blob/main/images/dolly.png)
 
+## System Requirements
+- Ubuntu 20.04
+- ROS2 Foxy
+- Visual Studio Code
 
+
+## How to Use The Packages
+- After Clonning the repo in **your_workspace/src/** then move to your_workspace(with cd ..) and perform colcon build
+
+
+## Instructor
+- **Muhammad Luqman** [Contact Profile](https://www.linkedin.com/in/muhammad-luqman-9b227a11b/)  
+- 
 ## License
 - Code presented here are Free to use Persoanlly/Commericially/Teaching/Referencing **BUT** without any warranty
