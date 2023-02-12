@@ -2,42 +2,58 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
-from math import pow, atan2, sqrt
+import sys
+import math
 
-def get_turtlesim_pose(data):
-    # print(data)
-    global bot_pose
-    bot_pose=data
-    bot_pose.x=data.x
-    bot_pose.y=data.y
-    
+class Turtle_GTG(Node):
+    def __init__(self):
+        super().__init__("Go_to_Goal_Node")
+        self.cmd_vel_pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
+        self.pose_sub = self.create_subscription(Pose, '/turtle1/pose', self.pose_callback, 10)
+        self.timer = self.create_timer(0.1, self.go_to_goal)
+        self.pose = Pose()
 
-def send_turtlesim_cmd_vel():
-    global bot_pose , pub , desired_pose
-    distance_to_goal = sqrt(pow((desired_pose.x - bot_pose.x), 2) +  pow((desired_pose.y - bot_pose.y), 2))
-    angle_to_goal    = atan2(desired_pose.y - bot_pose.y, desired_pose.x - bot_pose.x)
-    angle_to_turn    = angle_to_goal - bot_pose.theta
-    new_vel= Twist()
-    new_vel.linear.x = distance_to_goal
-    new_vel.angular.z= angle_to_turn
-    if (distance_to_goal>=0.5): # as it will never converge and overshoot
-        pub.publish(new_vel)
+    def pose_callback(self, data):
+        self.pose = data
+
+    def go_to_goal(self):
+        goal = Pose()
+        goal.x = float(sys.argv[1])
+        goal.y = float(sys.argv[2])
+        goal.theta = float(sys.argv[3])
+
+        new_vel = Twist()
+
+        # Ecludian Distance
+        distance_to_goal = math.sqrt( (goal.x - self.pose.x)**2  + (goal.y - self.pose.y)**2 )
+        # Angle to Goal
+        angle_to_goal =math.atan2(goal.y - self.pose.y , goal.x - self.pose.x)
+
+        distance_tolerance = 0.1
+        angle_tolerance = 0.01
+
+        angle_error = angle_to_goal - self.pose.theta
+        kp = 10
+
+        if abs(angle_error) > angle_tolerance:
+            new_vel.angular.z = kp * angle_error
+        else :
+            if( distance_to_goal ) >= distance_tolerance:
+                new_vel.linear.x = kp * distance_to_goal
+            else :
+                new_vel.linear.x= 0.0
+                self.get_logger().info("Goal Reached ")
+                quit()
 
 
+        self.cmd_vel_pub.publish(new_vel)
 
 def main(args=None):
     rclpy.init(args=args)
-
-    global node, pub , desired_pose
-    node = Node('Go_to_position_node')
-    node.create_subscription(Pose,'/turtle1/pose',get_turtlesim_pose,10)
-    desired_pose=Pose()
-    desired_pose.x = 1.0
-    desired_pose.y = 1.0
-    pub=node.create_publisher(Twist,'/turtle1/cmd_vel',10)
-    node.create_timer(1, send_turtlesim_cmd_vel)
-
-    rclpy.spin(node)
+    minimal_publisher = Turtle_GTG()
+    rclpy.spin(minimal_publisher)
+    minimal_publisher.destroy_node()
     rclpy.shutdown()
+
 if __name__ == '__main__':
     main()
