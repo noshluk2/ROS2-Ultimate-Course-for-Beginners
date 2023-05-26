@@ -1,6 +1,6 @@
 # ROS2 Ultimate Course for Beginners
 - This repository is great support to students of course  
-- Video Lectures for the course are here -> [Discounted_Link](https://www.udemy.com/course/ros2-ultimate-course-for-starters/?couponCode=APRIL_END) 
+- Video Lectures for the course are here -> [Discounted_Link](https://www.udemy.com/course/ros2-ultimate-course-for-starters/?couponCode=MAY_LEARN) 
 - People who are  learning ROS2 and needs scripts and explaination in the form of articles on *https://robotisim.com/* . 
 - You can check free previews in the course
 - Notes are provided as freebies
